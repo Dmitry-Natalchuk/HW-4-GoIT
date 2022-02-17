@@ -124,10 +124,13 @@ ul {
   font-weight: 500;
   font-size: 14px;
 }
-
 /*Герой*/
 .hero {
   background: var(--secondary-text-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center;
   padding: 200px 0;
 }
 .text-hero {
@@ -178,8 +181,17 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-
   color: var(--primary-text-color);
+}
+.group {
+  display: block;
+  height: 120px;
+  margin-bottom: 20px;
+  background: #f5f4fa;
+}
+.icon {
+  margin-top: 25px;
+  margin-left: 100px;
 }
 .info .list {
   display: flex;
@@ -222,19 +234,53 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.people-card:not(last-child) {
-  margin-right: 30px;
+.people-card {
   border: 1px solid;
   background: #fff;
   border-color: #eee;
   border-top: none;
 }
+.people-card:not(:last-child) {
+  margin-right: 30px;
+}
+.links-people {
+  width: 204px;
+  height: 44px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+}
+.links-people {
+  margin-bottom: 30px;
+}
+
 .prof {
   text-align: center;
   margin-top: 10px;
   font-size: 16px;
   line-height: 1.2;
   color: var(--primary-text-color);
+}
+/*КЛИЕНТЫ*/
+.group-client {
+  display: flex;
+  background: #fff;
+}
+.client {
+  width: 170px;
+  height: 92px;
+  border: 1px solid;
+  border-color: #afb1b8;
+  border-radius: 4px;
+}
+.client:not(:last-child) {
+  margin-right: 30px;
+}
+.client:hover {
+  fill: #188ce8;
+}
+.clients-icon {
+  margin: 16px 32px;
 }
 /*footer*/
 .footer {
