@@ -36,6 +36,7 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style: none;
 }
 .container {
   width: 1200px;
@@ -104,7 +105,7 @@ ul {
 }
 /* Menu Nav */
 .nav {
-  margin-right: 331px;
+  margin-right: 305px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -112,17 +113,31 @@ ul {
 
 /* E-mail */
 .mail {
+  display: flex;
+  flex-direction: row-reverse;
   margin-right: 50px;
   text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
 }
+.mail-icon {
+  margin-right: 10px;
+  fill: #757575;
+}
 .tel {
+  display: flex;
+  flex-direction: row-reverse;
   text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
+}
+.tel:focus .mail-icon,
+.tel:hover .mail-icon,
+.mail:focus .mail-icon,
+.mail:hover .mail-icon {
+  fill: var(--accent-color);
 }
 /*Герой*/
 .hero {
@@ -221,39 +236,54 @@ ul {
   font-size: 16px;
   line-height: 1.2;
 }
-.people ul {
+.people .list {
   display: flex;
-  margin-top: 50px;
 }
 .people-name {
   padding-top: 30px;
-  padding-bottom: 30px;
-}
-.people-card {
-  border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 16px;
 }
 .people-card {
   border: 1px solid;
   background: #fff;
   border-color: #eee;
   border-top: none;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .people-card:not(:last-child) {
   margin-right: 30px;
 }
 .links-people {
-  width: 204px;
-  height: 44px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 50%;
-}
-.links-people {
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
+.people-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.links {
+  fill: #afb1b8;
+}
+.people-info:hover .links,
+.people-info:focus .links {
+  fill: var(--main-color);
+}
+.people-info:hover,
+.people-info:focus {
+  background-color: var(--accent-color);
+}
 
+.people-list-item:not(:last-child) {
+  margin-right: 10px;
+}
 .prof {
   text-align: center;
   margin-top: 10px;
@@ -276,11 +306,23 @@ ul {
 .client:not(:last-child) {
   margin-right: 30px;
 }
-.client:hover {
-  fill: #188ce8;
-}
 .clients-icon {
-  margin: 16px 32px;
+  fill: #afb1b8;
+}
+.group-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+}
+.group-info:focus .clients-icon,
+.group-info:hover .clients-icon {
+  fill: var(--accent-color);
+}
+.client:focus,
+.client:hover {
+  border-color: var(--accent-color);
 }
 /*footer*/
 .footer {
@@ -295,8 +337,12 @@ ul {
   line-height: 1.2;
   color: var(--main-color);
 }
-.adres {
+.address {
+  width: 231px;
+  height: 81px;
   margin-top: 20px;
+}
+.adres {
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -312,6 +358,38 @@ ul {
   font-size: 14px;
   line-height: 1.7;
   color: var(--footer-text-color);
+}
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-list {
+  display: flex;
+  margin-top: 20px;
+}
+.people-info-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #757575;
+}
+.links-footer {
+  fill: #fff;
+}
+.footer-info {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.people-info-footer:focus,
+.people-info-footer:hover {
+  background-color: var(--accent-color);
 }
 /*ПОРТФОЛИО*/
 .button-portfolio {
