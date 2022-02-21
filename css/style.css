@@ -199,14 +199,12 @@ ul {
   color: var(--primary-text-color);
 }
 .group {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   margin-bottom: 20px;
   background: #f5f4fa;
-}
-.icon {
-  margin-top: 25px;
-  margin-left: 100px;
 }
 .info .list {
   display: flex;
@@ -258,6 +256,7 @@ ul {
 .links-people {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
   margin-bottom: 30px;
 }
 .people-info {
@@ -325,6 +324,9 @@ ul {
   border-color: var(--accent-color);
 }
 /*footer*/
+.footer .container {
+  display: flex;
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
