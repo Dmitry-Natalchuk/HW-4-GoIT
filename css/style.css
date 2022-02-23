@@ -239,7 +239,7 @@ ul {
 }
 .people-name {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
 }
 .people-card {
   border: 1px solid;
@@ -257,7 +257,6 @@ ul {
   display: flex;
   justify-content: center;
   margin-top: 16px;
-  margin-bottom: 30px;
 }
 .people-info {
   display: flex;
@@ -361,10 +360,8 @@ ul {
   line-height: 1.7;
   color: var(--footer-text-color);
 }
-.footer-icon {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.footer-addres {
+  margin-right: 70px;
 }
 .footer-list {
   display: flex;
